@@ -58,13 +58,19 @@
     .label {
         width:40%;
     }
+    .form {
+        background-color:rgba(255,255,255,70%);
+        border-radius:3dvh;
+        margin-top:1dvh;
+        margin-bottom;1dvh;
+    }
     table {
         width:100%;
         border-collapse: collapse;
         background-color:black;
         overflow-y:scroll;
         display:block;
-        height:50dvh;
+        height:60dvh;
         border-radius: 3dvh;
     }
     thead {
@@ -111,7 +117,7 @@
     h4 {
         font-size:3dvh;
     }
-    h1 {
+    h1, h3 {
         margin:.5dvh;
         margin-left:1.5dvh !important;
     }
@@ -192,7 +198,10 @@ only screen and (max-width: 760px),
         </div>
         <hr>
         <div class='content'>
-            <div class='sub'>
+            <div class='sub form'>
+                <div class='header'>
+                    <h3>Add or Edit Products</h3>
+                </div>
             <?php if(isset($msg)):?>
                 <div class='msg'>
                     <center>
