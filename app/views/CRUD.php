@@ -83,6 +83,9 @@
     a {
         text-decoration: none;
     }
+    a:link {
+        color:white;
+    }
     a:hover {
         color:rgb(251, 242, 184);
     }
@@ -169,7 +172,7 @@ only screen and (max-width: 760px),
 <body>
     <div class='box'>
         <div class='header'>
-            <h1>Manage</h1>
+            <h1><a href='<?= base_url();?>/Manage'>Manage</a></h1>
         </div>
         <hr>
         <div class='content'>
