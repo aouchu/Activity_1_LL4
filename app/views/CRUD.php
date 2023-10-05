@@ -134,7 +134,7 @@
     input[type = submit] {
         border-radius:2dvh;
         padding: .4dvh;
-        font-size:2.5dvh;
+        font-size:3dvh;
         width:86%;
         background-color:black;
         color:white;
