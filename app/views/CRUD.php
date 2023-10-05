@@ -67,12 +67,16 @@
     th{
         color:rgb(251, 242, 184);
         padding:1dvh;
-        border-bottom:gray;
+        border-bottom: .2dvh solid gray;
     }
     td {
         text-align:center;
         color:white;
         padding:2dvh;
+        border-right: .2dvh solid gray;
+    }
+    td:last-child {
+        border-right:none;
     }
     tr {
         border-bottom: .2dvh solid gray;
