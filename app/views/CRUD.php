@@ -106,7 +106,7 @@
         color:white;
     }
     a:hover {
-        color:rgb(251, 242, 184);
+        color:rgb(251, 242, 184) !important;
     }
     a:active {
         color:rgb(251, 242, 184);
@@ -202,13 +202,13 @@ only screen and (max-width: 760px),
                 <div class='header'>
                     <h3>Add or Edit Products</h3>
                 </div>
-            <?php if(isset($msg)):?>
-                <div class='msg'>
-                    <center>
-                        <h4><?= $msg; ?></h4>
-                    </center>
-                </div>
-            <?php endif;?>
+                    <?php if(isset($msg)):?>
+                        <div class='msg'>
+                            <center>
+                                <h4><?= $msg; ?></h4>
+                            </center>
+                        </div>
+                    <?php endif;?>
                 <form action='/Save' method='post'>
                     <input type='hidden' name='id' value='<?php if(isset($selected['id'])): ?><?= $selected['id']; endif; ?>'>
                     
