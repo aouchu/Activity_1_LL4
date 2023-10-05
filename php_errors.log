@@ -1,0 +1,1 @@
+[05-Oct-2023 11:52:59 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in C:\laragon\www\Activity_1_LL4\app\views\CRUD.php on line 101
