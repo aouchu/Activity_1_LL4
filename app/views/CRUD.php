@@ -62,9 +62,18 @@
         width:100%;
         border-collapse: collapse;
         background-color:black;
-        border-radius:2dvh;
+        overflow-y:scroll;
+        display:block;
+        height:50dvh;
+        border-radius: 3dvh;
     }
-    th{
+    thead {
+        position:sticky;
+        z-index:2;
+        top:0;
+        background-color:black;
+    }
+    th {
         color:rgb(251, 242, 184);
         padding:1dvh;
         border-bottom: .2dvh solid gray;
@@ -126,6 +135,9 @@
     }
     input[type = submit]:hover {
         background-color:rgba(0,0,0,70%);
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
     }
     @media 
 only screen and (max-width: 760px),
@@ -237,6 +249,7 @@ only screen and (max-width: 760px),
                                 <th colspan='2'>Actions</th>
                             </tr>
                         </thead>
+                        <tbody>
                     <?php foreach($Clothes as $val): ?>
                         <tr>
                             <td><?= $val['id']; ?></td>
@@ -248,6 +261,7 @@ only screen and (max-width: 760px),
                             <td><a href='<?= base_url(); ?>/Delete/<?= $val['id']; ?>'>Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
+                        </tbody>
                     </table>
                 </center>
             </div>
