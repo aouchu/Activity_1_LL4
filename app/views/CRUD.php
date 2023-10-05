@@ -99,6 +99,9 @@
     tr:last-child {
         border-bottom: none;
     }
+    tr:not(#head):hover {
+        background-color:rgba(209, 224, 224,30%) !important;
+    }
     a {
         text-decoration: none;
     }
@@ -249,7 +252,7 @@ only screen and (max-width: 760px),
                 <center>
                     <table>
                         <thead>
-                            <tr>
+                            <tr id='head'>
                                 <th>ID</th>
                                 <th>Clothing Name</th>
                                 <th>Size</th>
