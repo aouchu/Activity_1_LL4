@@ -26,34 +26,22 @@ class ClothingController extends Controller {
         if($id != null) {
             $result = $this->Clothing_Line_model->UpdateData($id,$Name,$Size,$Quantity,$Price);
             if($result) {
-                $data = [
-                    'Clothes' => $this->Clothing_Line_model->GetData(),
-                    'msg' => 'Updated Sucessfully!',
-                ];
-                $this->call->view('CRUD', $data);
+                $this->session->set_flashdata('msg','Updated Successfully');
+                redirect(base_url().'/Manage');
             }
             else{
-                $data = [
-                    'Clothes' => $this->Clothing_Line_model->GetData(),
-                    'msg' => 'Something Went Wrong',
-                ];
-                $this->call->view('CRUD', $data);
+                $this->session->set_flashdata('msg','Something Went Wrong');
+                redirect(base_url().'/Manage');
             }
         }else{
             $result = $this->Clothing_Line_model->SaveData($Name,$Size,$Quantity,$Price);
             if($result) {
-                $data = [
-                    'Clothes' => $this->Clothing_Line_model->GetData(),
-                    'msg' => 'Saved Sucessfully!',
-                ];
-                $this->call->view('CRUD', $data);
+                $this->session->set_flashdata('msg','Saved Successfully');
+                redirect(base_url().'/Manage');
             }
             else{
-                $data = [
-                    'Clothes' => $this->Clothing_Line_model->GetData(),
-                    'msg' => 'Something Went Wrong',
-                ];
-                $this->call->view('CRUD', $data);
+                $this->session->set_flashdata('msg','Something Went Wrong');
+                redirect(base_url().'/Manage');
             }
         };
     }
@@ -72,18 +60,12 @@ class ClothingController extends Controller {
         $ID = $id;
         $result = $this->Clothing_Line_model->DeleteData($ID);
         if($result) {
-            $data = [
-                'Clothes' => $this->Clothing_Line_model->GetData(),
-                'msg' => 'Deleted Sucessfully!',
-            ];
-            $this->call->view('CRUD', $data);
+            $this->session->set_flashdata('msg','Deleted Successfully');
+            redirect(base_url().'/Manage');
         }
         else{
-            $data = [
-                'Clothes' => $this->Clothing_Line_model->GetData(),
-                'msg' => 'Something Went Wrong',
-            ];
-            $this->call->view('CRUD', $data);
+            $this->session->set_flashdata('msg','Something Went Wrong');
+            redirect(base_url().'/Manage');
         }
         
     }

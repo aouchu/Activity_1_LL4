@@ -205,10 +205,10 @@ only screen and (max-width: 760px),
                 <div class='header'>
                     <h3>Add or Edit Products</h3>
                 </div>
-                    <?php if(isset($msg)):?>
+                    <?php if(isset($_SESSION['msg'])):?>
                         <div class='msg'>
                             <center>
-                                <h4><?= $msg; ?></h4>
+                                <h4><?= $_SESSION['msg']; ?></h4>
                             </center>
                         </div>
                     <?php endif;?>
